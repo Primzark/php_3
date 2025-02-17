@@ -19,9 +19,9 @@ $specialDay = 14;
         echo '<h1 style="color: red;">' . strtoupper($month) . '</h1>';
 
         echo '<div class="row">';
-        for ($i = 0; $i < 6 ; $i++) {
+        for ($i = 0; $i < 7 ; $i++) {
     
-        $dayLetter = ["L", "M", "J", "V", "S", "D" ][$i];
+        $dayLetter = ["L", "M", "M", "J", "V", "S", "D" ][$i];
         echo '<div class="col p-2 text-center fw-bold">' . $dayLetter . '</div>';
         }
         echo '</div>';
