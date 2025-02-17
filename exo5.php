@@ -2,6 +2,7 @@
 $month = "fevrier";
 $totalDays = 28;
 $specialDay = 14;
+$daysOfweek = ["L", "M", "M", "J", "V", "S", "D"];
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,8 @@ $specialDay = 14;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5 - Calendar</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
@@ -19,12 +20,10 @@ $specialDay = 14;
         echo '<h1 style="color: red;">' . strtoupper($month) . '</h1>';
 
         echo '<div class="row">';
-        for ($i = 0; $i < 7 ; $i++) {
-    
-        $dayLetter = ["L", "M", "M", "J", "V", "S", "D" ][$i];
-        echo '<div class="col p-2 text-center fw-bold">' . $dayLetter . '</div>';
+        foreach ($daysOfweek as $daysletter) {
+             echo '<div class ="col p-2 text-center fw-bold">' . $daysletter . '</div>';
         }
-        echo '</div>';
+
         echo '<div class="row">';
     
 
@@ -46,5 +45,7 @@ $specialDay = 14;
         echo '</div>';
         ?>
     </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
 </body>
 </html>
